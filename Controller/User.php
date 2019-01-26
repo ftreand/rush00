@@ -76,3 +76,22 @@
             }
         }
     }
+    function delete_account($post){;
+        if (isset($post['password']) && !empty($post['password'])){
+            $password = hash('whirlpool', $post['password']);
+            $data = unserialize(file_get_contents("../private/passwd"));
+            var_dump($data);
+            print_r($data);
+            foreach ($data as $key => $value)
+            {
+                if ($value['login'] == $_SESSION['login'] && $value['passwd'] === $password){
+                    unset($data[$key]);
+                    echo "OKkkkkkkkkkkk\n";
+                    print_r($data);
+                    file_put_contents("../private/passwd", serialize($data));
+                    session_destroy();
+                    header("Location: ../View");
+                }
+            }
+        }
+    }
