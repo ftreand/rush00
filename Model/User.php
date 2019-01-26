@@ -1,6 +1,6 @@
 <?php
 
-function addUser($user, $password) {
+function add_user($user, $password) {
     $data = unserialize(file_get_contents('../private/passwd'));
     $new['login'] = $user;
     $new['passwd'] = hash('whirlpool', $password);

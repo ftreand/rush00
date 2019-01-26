@@ -15,7 +15,6 @@ session_start();
 <header class="main_header">
     <nav>
         <ul>
-
             <li class="viande"><a href="index.php">Acceuil</a>
             </li>
             <li class="pdj"><a href="#">Catégories</a>
@@ -27,13 +26,19 @@ session_start();
                 </ul>
             </li>
             <li class="poisson"><?php
-                if (isset($_SESSION) && !empty($_SESSION))
+                if (isset($_SESSION) && !empty($_SESSION)) {
                     echo "<a href='../Redirection/disconnect.php'>Déconnexion</a>";
+                }
                 else
                     echo "<a href=\"login.php\">Identification</a>" ?>
                 <ul class="submenu">
                 </ul>
             </li>
+            <?php
+            if (isset($_SESSION["admin"]) && $_SESSION["admin"] === true) {
+                echo "<li class=\"poisson\"><a href='admin.php'>Administration page</a></li>";
+            }
+            ?>
             <li class="vegan"><a href="#">Panier</a>
                 <ul class="submenu">
                 </ul>

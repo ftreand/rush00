@@ -1,3 +1,39 @@
+nav {
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin: 10px;
+}
+
+.bloc_admin {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.bloc_admin form {
+    width: 200px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bloc_admin input {
+    margin: 5px;
+}
+
+.bloc_inside_admin {
+    margin: 50px;
+}
+
+.adding_button {
+    width: 100px;
+}
+
 .main_header{
     background: rgba(26,26,26,.9);
     left: 0;

@@ -22,12 +22,12 @@
                             exit();
                         }
                     }
-                    addUser($login, $password);
+                    add_user($login, $password);
                     $_SESSION["login"] = $login;
                     header("Location: ../View");
                     exit();
                 } else {
-                    addUser($login, $password);
+                    add_user($login, $password);
                     $_SESSION["login"] = $login;
                     header("Location: ../View");
                     exit();
@@ -55,6 +55,9 @@
                 foreach ($data as $key => $value) {
                     if ($value['login'] == $login && $value['passwd'] == $pw) {
                         $_SESSION["login"] = $login;
+                        if ($login === "ftreand") {
+                            $_SESSION["admin"] = true;
+                        }
                         header("Location: ../View");
                         exit();
                     }
@@ -73,5 +76,3 @@
             }
         }
     }
-
-
