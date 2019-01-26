@@ -17,18 +17,24 @@
                 if (!empty($data)) {
                     foreach ($data as $key => $value) {
                         if ($value['login'] === $login) {
-                            //Login is already
+                            //Login is already taken
                             header("Location: ../View/create_account.php");
                             exit();
                         }
                     }
                     add_user($login, $password);
                     $_SESSION["login"] = $login;
+                    if ($login === "ftreand") {
+                        $_SESSION["admin"] = true;
+                    }
                     header("Location: ../View");
                     exit();
                 } else {
                     add_user($login, $password);
                     $_SESSION["login"] = $login;
+                    if ($login === "ftreand") {
+                        $_SESSION["admin"] = true;
+                    }
                     header("Location: ../View");
                     exit();
                 }

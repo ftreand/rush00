@@ -26,11 +26,6 @@ session_start();
                 </ul>
             </li>
             <li class="poisson"><?php
-            if (isset($_SESSION) && !empty($_SESSION))
-                echo "<a href='delete_account.php'>Delete Account</a>";
-            ?>
-            </li>
-            <li class="poisson"><?php
                 if (isset($_SESSION) && !empty($_SESSION)) {
                     echo "<a href='../Redirection/disconnect.php'>Déconnexion</a>";
                 }
@@ -38,6 +33,11 @@ session_start();
                     echo "<a href=\"login.php\">Identification</a>" ?>
                 <ul class="submenu">
                 </ul>
+            </li>
+            <li class="poisson"><?php
+                if (isset($_SESSION) && !empty($_SESSION))
+                    echo "<a href='delete_account.php'>Delete Account</a>";
+                ?>
             </li>
             <?php
             if (isset($_SESSION["admin"]) && $_SESSION["admin"] === true) {
