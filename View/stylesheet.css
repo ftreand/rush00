@@ -1,0 +1,247 @@
+.main_header{
+    background: rgba(26,26,26,.9);
+    left: 0;
+    padding: 0;
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 500;
+    transition: background .2s ease;
+}
+.main_header .content{
+    margin: 0 auto;
+    max-width: 1680px;
+    position: relative;
+}
+
+.minishop{
+    display:inline-block;
+    position: relative;
+    top:17px;
+}
+
+nav > ul{
+    margin: 0px;
+    padding: 0px;
+}
+
+nav > ul > li{
+    float: right;
+    position: relative;
+}
+
+nav li{
+    list-style-type: none;
+}
+.viande{
+    float:left;
+}
+.pdj{
+    float:left;
+}
+
+
+.submenu{
+    display: none;
+}
+
+nav{
+    width: 100%;
+    background-color: #424558;
+}
+
+nav > ul::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+nav a{
+    display: inline-block;
+    text-decoration: none;
+}
+
+nav > ul > li > a{
+    padding: 20px 30px;
+    color: #FFF;
+}
+
+nav li:hover .submenu{
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    padding: 0px;
+    z-index: 100000;
+}
+
+.submenu li{
+    border-bottom: 1px solid #CCC;
+}
+
+.submenu li a{
+    padding: 15px 30px;
+    font-size: 13px;
+    color: #222538;
+    width: 270px;
+}
+
+.pdj:hover{
+    border-top: 5px solid #e44d26;
+    background-color: RGBa(228, 77, 78, 0.15);
+}
+
+.viande:hover{
+    border-top: 5px solid #e44d26;
+    background-color: RGBa(228, 77, 78, 0.15);
+}
+
+.poisson:hover{
+    border-top: 5px solid #e44d26;
+    background-color: RGBa(228, 77, 78, 0.15);
+}
+
+.vegan:hover{
+    border-top: 5px solid #e44d26;
+    background-color: RGBa(228, 77, 78, 0.15);
+}
+
+nav > ul > li:hover a{
+    padding: 15px 30px 20px 30px;
+}
+
+.pdj .submenu{
+    background-color: RGB(230, 100, 40);
+}
+
+.viande .submenu{
+    background-color: RGB(230, 100, 40);
+}
+
+.poisson .submenu{
+    background-color: RGB(230, 100, 40);
+}
+
+.vegan .submenu{
+    background-color: RGB(230, 100, 40);
+}
+
+.submenu li:hover{
+    font-weight: bold;
+    color: black;
+}
+
+.pdj .submenu li:hover{
+    background-color: RGB(210, 77, 60);
+}
+
+.viande .submenu li:hover{
+    background-color: RGB(210, 77, 60);
+}
+
+.poisson .submenu li:hover{
+    background-color: RGB(210, 77, 60);
+}
+
+.vegan .submenu li:hover{
+    background-color: RGB(210, 77, 60);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+}
+.user{
+    width: 32px;
+    height: 50px;
+    color: #fff;
+    top: 15%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+
+.icon {
+    position: absolute;
+    bottom: 7vh;
+}
+
+.loginbox{
+    width: 320px;
+    height: 500px;
+    background: #000;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+
+}
+
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.loginbox p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.loginbox input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.loginbox input[type="text"], input[type="password"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.loginbox input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #fb2525;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+.loginbox input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: #ffc107;
+    color: #000;
+}
+
+.loginbox a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgrey;
+}
+
+.loginbox a:hover
+{
+    color: #ffc107;
+}
