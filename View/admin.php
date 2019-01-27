@@ -2,19 +2,12 @@
 include("./header.php");
 include("../Controller/ArticleController.php");
 
-$articles = unserialize(file_get_contents('../private/article'));
+$articles = unserialize(file_get_contents('../private/articles'));
+$categories = unserialize(file_get_contents('../private/categories'));
 
 ?>
 <body>
 <h1>Administration page</h1>
-
-
-<?php
-    print_r($articles);
-
-?>
-
-
 
 <div class="bloc_admin">
 
@@ -24,6 +17,13 @@ $articles = unserialize(file_get_contents('../private/article'));
             <input type="file" name="picture" accept="image/*">
             <input type="number" name="price" value="prix">
             <input type="text" name="name" placeholder="nom">
+            <?php
+            if (!empty($categories)) {
+                foreach ($categories as $category) {
+                    echo "<input type='checkbox' name='".$category["name"]."'>".$category["name"]."</input>";
+                }
+            }
+            ?>
             <input class="adding_button" type="submit" value="ajouter">
         </form>
     </div>
@@ -36,9 +36,11 @@ $articles = unserialize(file_get_contents('../private/article'));
 <!--            <input type="text" name="name" value="nom">-->
             <select>
                 <?php
+                if (!empty($articles)) {
                     foreach ($articles as $article) {
                         echo "<option>".$article["name"]."</option>";
                     }
+                }
                 ?>
             </select>
             <input class="adding_button" type="submit" value="ajouter">
@@ -60,7 +62,7 @@ $articles = unserialize(file_get_contents('../private/article'));
 
     <div class="bloc_inside_admin">
         <h2>Ajouter categorie</h2>
-        <form method="post" action="../Redirection/handle_admin.php?action=add_categorie">
+        <form method="post" action="../Redirection/handle_admin.php?action=add_category">
             <input type="text" name="name" placeholder="nom">
             <input class="adding_button" type="submit" value="ajouter">
         </form>
@@ -68,7 +70,7 @@ $articles = unserialize(file_get_contents('../private/article'));
 
     <div class="bloc_inside_admin">
         <h2>Modifier categorie</h2>
-        <form method="post" action="../Redirection/handle_admin.php?action=modify_categorie">
+        <form method="post" action="../Redirection/handle_admin.php?action=modify_category">
             <input type="text" name="name" value="nom">
             <input type="text" name="product" value="product">
             <!-- add or delete-->
@@ -78,7 +80,7 @@ $articles = unserialize(file_get_contents('../private/article'));
 
     <div class="bloc_inside_admin">
         <h2>Supprimer categorie</h2>
-        <form method="post" action="../Redirection/handle_admin.php?action=delete_categorie">
+        <form method="post" action="../Redirection/handle_admin.php?action=delete_category">
             <input type="text" name="name" value="nom">
             <input class="adding_button" type="submit" value="ajouter">
         </form>
