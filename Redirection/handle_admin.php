@@ -12,7 +12,7 @@
             modify_article($_POST, $_FILES);
         }
         else if ($_GET["action"] === "delete_article") {
-            echo $_GET["action"];
+            delete_article($_POST);
         }
         else if ($_GET["action"] === "add_category") {
             create_category($_POST["name"]);
