@@ -9,7 +9,7 @@
             create_article($_POST, $_FILES);
         }
         else if ($_GET["action"] === "modify_article") {
-            echo $_GET["action"];
+            modify_article($_POST, $_FILES);
         }
         else if ($_GET["action"] === "delete_article") {
             echo $_GET["action"];

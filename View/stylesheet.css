@@ -2,17 +2,24 @@ nav {
     margin-bottom: 20px;
 }
 
-h2 {
-    margin: 10px;
+.file{
+    background-color: white;
+    width: 100px;
+}
+
+.checkboxs {
+    margin-top: -15px;
+    margin-bottom: 10px;
+    font-size: small;
 }
 
 .bloc_admin {
+    background-color: white;
     padding: 10px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
-
 .bloc_admin form {
     width: 200px;
     padding: 20px;
@@ -21,19 +28,29 @@ h2 {
     justify-content: center;
     align-items: center;
 }
-
 .bloc_admin input {
     margin: 5px;
 }
-
 .bloc_inside_admin {
+    background-color: #fff4ea;
+    box-shadow: 0px 0px 20px 10px rgba(26, 26, 26, 0.19);
+    border-radius: 15px;
     margin: 50px;
 }
-
+.bloc_inside_admin h2{
+    font-family: Nunito;
+    text-align: center;
+    color:black;
+}
+.bloc_inside_admin input[type="file"]{
+    padding-left: 3.3vw;
+}
 .adding_button {
+    box-shadow: 2px 2px black;
+    border-radius: 3px;
+    background-color: white;
     width: 100px;
 }
-
 .main_header{
     background: rgba(26,26,26,.9);
     left: 0;
@@ -50,23 +67,19 @@ h2 {
     max-width: 1680px;
     position: relative;
 }
-
 .minishop{
     display:inline-block;
     position: relative;
     top:17px;
 }
-
 nav > ul{
     margin: 0px;
     padding: 0px;
 }
-
 nav > ul > li{
     float: right;
     position: relative;
 }
-
 nav li{
     list-style-type: none;
 }
@@ -76,33 +89,26 @@ nav li{
 .pdj{
     float:left;
 }
-
-
 .submenu{
     display: none;
 }
-
 nav{
     width: 100%;
     background-color: #424558;
 }
-
 nav > ul::after{
     content: "";
     display: block;
     clear: both;
 }
-
 nav a{
     display: inline-block;
     text-decoration: none;
 }
-
 nav > ul > li > a{
     padding: 20px 30px;
     color: #FFF;
 }
-
 nav li:hover .submenu{
     display: inline-block;
     position: absolute;
@@ -111,79 +117,62 @@ nav li:hover .submenu{
     padding: 0px;
     z-index: 100000;
 }
-
 .submenu li{
     border-bottom: 1px solid #CCC;
 }
-
 .submenu li a{
     padding: 15px 30px;
     font-size: 13px;
     color: #222538;
     width: 270px;
 }
-
 .pdj:hover{
     border-top: 5px solid #e44d26;
     background-color: RGBa(228, 77, 78, 0.15);
 }
-
 .viande:hover{
     border-top: 5px solid #e44d26;
     background-color: RGBa(228, 77, 78, 0.15);
 }
-
 .poisson:hover{
     border-top: 5px solid #e44d26;
     background-color: RGBa(228, 77, 78, 0.15);
 }
-
 .vegan:hover{
     border-top: 5px solid #e44d26;
     background-color: RGBa(228, 77, 78, 0.15);
 }
-
 nav > ul > li:hover a{
     padding: 15px 30px 20px 30px;
 }
-
 .pdj .submenu{
     background-color: RGB(230, 100, 40);
 }
-
 .viande .submenu{
     background-color: RGB(230, 100, 40);
 }
-
 .poisson .submenu{
     background-color: RGB(230, 100, 40);
 }
-
 .vegan .submenu{
     background-color: RGB(230, 100, 40);
 }
-
 .submenu li:hover{
     font-weight: bold;
     color: black;
 }
-
 .pdj .submenu li:hover{
     background-color: RGB(210, 77, 60);
 }
-
 .viande .submenu li:hover{
     background-color: RGB(210, 77, 60);
 }
-
 .poisson .submenu li:hover{
     background-color: RGB(210, 77, 60);
 }
-
 .vegan .submenu li:hover{
     background-color: RGB(210, 77, 60);
 }
-
 body{
     margin: 0;
     padding: 0;
@@ -203,12 +192,10 @@ body{
     box-sizing: border-box;
     padding: 70px 30px;
 }
-
 .icon {
     position: absolute;
     bottom: 7vh;
 }
-
 .loginbox{
     width: 320px;
     height: 500px;
@@ -220,27 +207,22 @@ body{
     transform: translate(-50%,-50%);
     box-sizing: border-box;
     padding: 70px 30px;
-
 }
-
 h1{
     margin: 0;
     padding: 0 0 20px;
     text-align: center;
     font-size: 22px;
 }
-
 .loginbox p{
     margin: 0;
     padding: 0;
     font-weight: bold;
 }
-
 .loginbox input{
     width: 100%;
     margin-bottom: 20px;
 }
-
 .loginbox input[type="text"], input[type="password"]
 {
     border: none;
@@ -251,7 +233,6 @@ h1{
     color: #fff;
     font-size: 16px;
 }
-
 .loginbox input[type="submit"]
 {
     border: none;
@@ -262,21 +243,18 @@ h1{
     font-size: 18px;
     border-radius: 20px;
 }
-
 .loginbox input[type="submit"]:hover
 {
     cursor: pointer;
     background: #ffc107;
     color: #000;
 }
-
 .loginbox a{
     text-decoration: none;
     font-size: 12px;
     line-height: 20px;
     color: darkgrey;
 }
-
 .loginbox a:hover
 {
     color: #ffc107;
