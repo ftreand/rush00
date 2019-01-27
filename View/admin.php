@@ -102,18 +102,62 @@ $categories = unserialize(file_get_contents('../private/categories'));
     <div class="bloc_inside_admin">
         <h2>Modifier categorie</h2>
         <form method="post" action="../Redirection/handle_admin.php?action=modify_category">
-            <input type="text" name="name" value="nom">
-            <input type="text" name="product" value="product">
+            <h4>Selectionner categorie</h4>
+            <select name="categorie_name">
+                <?php
+                if (!empty($categories)) {
+                    foreach ($categories as $key => $category) {
+                        echo "<option>" . $key . "</option>";
+                    }
+                }
+                ?>
+            </select>
+
+            <h4>Renommer categorie</h4>
+            <input type="text" name="name" placeholder="nom">
+
+            <h4>Ajouter article</h4>
+            <select name="article_to_add">
+                <option></option>
+                <?php
+                if (!empty($articles)) {
+                    foreach ($articles as $key => $article) {
+                        echo "<option>" . $key . "</option>";
+                    }
+                }
+                ?>
+            </select>
+
+            <h4>Supprimer article</h4>
+            <select name="article_to_delete">
+                <option></option>
+                <?php
+                if (!empty($articles)) {
+                    foreach ($articles as $key => $article) {
+                        echo "<option>" . $key . "</option>";
+                    }
+                }
+                ?>
+            </select>
+
             <!-- add or delete-->
-            <input class="adding_button" type="submit" value="ajouter">
+            <input class="adding_button" type="submit" value="modiier">
         </form>
     </div>
 
     <div class="bloc_inside_admin">
         <h2>Supprimer categorie</h2>
         <form method="post" action="../Redirection/handle_admin.php?action=delete_category">
-            <input type="text" name="name" value="nom">
-            <input class="adding_button" type="submit" value="ajouter">
+            <select name="categorie_name">
+                <?php
+                if (!empty($categories)) {
+                    foreach ($categories as $key => $category) {
+                        echo "<option>" . $key . "</option>";
+                    }
+                }
+                ?>
+            </select>
+            <input class="adding_button" type="submit" value="supprimer">
         </form>
     </div>
 
@@ -125,8 +169,8 @@ $categories = unserialize(file_get_contents('../private/categories'));
     <div class="bloc_inside_admin">
         <h2>Ajouter utilisateur</h2>
         <form method="post" action="../Redirection/handle_admin.php?action=add_user">
-            <input type="text" name="name" value="nom">
-            <input type="text" name="password" value="password">
+            <input type="text" name="name" placeholder="nom">
+            <input type="text" name="password" placeholder="password">
             <input class="adding_button" type="submit" value="ajouter">
         </form>
     </div>

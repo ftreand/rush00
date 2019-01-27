@@ -18,13 +18,13 @@
             create_category($_POST["name"]);
         }
         else if ($_GET["action"] === "modify_category") {
-            echo $_GET["action"];
+            modify_category($_POST);
         }
         else if ($_GET["action"] === "delete_category") {
-            echo $_GET["action"];
+            delete_category($_POST);
         }
         else if ($_GET["action"] === "add_user") {
-            echo $_GET["action"];
+            add_user_from_admin($_POST);
         }
         else if ($_GET["action"] === "modify_user") {
             echo $_GET["action"];
@@ -34,6 +34,7 @@
         }
         else {
             //action unknown
+            header("Location: ../View");
         }
     }
     else {

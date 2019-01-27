@@ -2,14 +2,6 @@
 
 include("../Model/Article.php");
 
-
-function htmldump($variable, $height = "300px")
-{
-    echo "<pre style=\"border: 1px solid #000; height: {$height}; overflow: auto; margin: 0.5em;\">";
-    var_dump($variable);
-    echo "</pre>\n";
-}
-
 function check_if_exists($name)
 {
     $data = unserialize(file_get_contents("../private/articles"));
